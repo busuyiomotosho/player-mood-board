@@ -1,5 +1,7 @@
 # Player Mood Board - Local Setup Guide
 
+Live Application: https://player-mood-board-eight.vercel.app/
+
 The Player Mood Board is a web application that allows soccer players to submit their mood after training sessions and provides coaches with a live dashboard of team sentiment. This guide will help you set up and run the application locally.
 
 ## Features
