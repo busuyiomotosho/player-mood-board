@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^api/mood$ /api/mood.php [L]
+RewriteRule ^api/moods$ /api/moods.php [L]
