@@ -23,21 +23,21 @@ Make sure you have these installed before proceeding:
 # Step-by-Step Setup
 
 ## 1. Clone the repository
-`git clone` https://github.com/busuyiomotosho/player-mood-board.git
+`git clone https://github.com/busuyiomotosho/player-mood-board.git` >> 
 `cd player-mood-board`
 
 ## 2. Set up the Backend
-`cd backend` # Navigate to backend directory
-`touch mood.db` # Create SQLite database file
-`chmod 666 mood.db` # Set permissions (Linux/macOS)
+`cd backend` # Navigate to backend directory >> 
+`touch mood.db` # Create SQLite database file >>
+`chmod 666 mood.db` # Set permissions (Linux/macOS) >>
 `php -S localhost:8000 public/router.php` # Start PHP server
 
 ## 3. Set up the Frontend
 
 Open a new terminal window/tab
-`cd frontend` # Navigate to frontend directory
-`npm install` # Install dependencies
-`echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local` # Create environment file
+`cd frontend` # Navigate to frontend directory >> 
+`npm install` # Install dependencies >> 
+`echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local` # Create environment file >> 
 `npm run dev` # Start development server
 
 # Access the Application
@@ -111,37 +111,3 @@ Making changes
 
 The application will hot-reload when you save frontend changes
 Restart PHP server after backend changes
-
-# Project Structure
-
-player-mood-board/
-├── backend/                  # PHP backend
-│   ├── api/                  # API endpoints
-│   │   ├── mood.php          # Mood submission
-│   │   └── moods.php         # Mood retrieval
-│   ├── config/               # Configuration
-│   │   └── database.php      # Database connection
-│   ├── public/               # Web server root
-│   │   └── router.php        # Request router
-│   └── mood.db               # SQLite database
-├── frontend/                 # Next.js frontend
-│   ├── app/                  # App router
-│   │   ├── (player)/         # Player route group
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── coach/            # Coach route group
-│   │   │   ├── layout.tsx
-│   │   │   └── page.tsx
-│   │   ├── layout.tsx        # Root layout
-│   │   └── page.tsx          # Home page
-│   ├── components/           # React components
-│   │   ├── EmojiButton.tsx
-│   │   ├── MoodCard.tsx
-│   │   └── MoodChart.tsx
-│   ├── lib/                  # Utility functions
-│   │   └── api.ts            # API client
-│   ├── styles/               # Global styles
-│   │   └── globals.css
-│   ├── .env.local            # Environment variables
-│   └── package.json          # Frontend dependencies
-└── README.md                 # This documentation
