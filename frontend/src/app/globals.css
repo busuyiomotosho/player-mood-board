@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-happy: #4CAF50;
+  --color-neutral: #FFC107;
+  --color-sad: #F44336;
+  
+  --font-family-sans: system-ui, sans-serif;
+  
+  --animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+}
+
+@layer utilities {
+  .emoji-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1);
+    font-size: 3.5rem;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  
+  .mood-card {
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    
+    &.happy { background-color: color-mix(in srgb, var(--color-happy) 10%, white); }
+    &.neutral { background-color: color-mix(in srgb, var(--color-neutral) 10%, white); }
+    &.sad { background-color: color-mix(in srgb, var(--color-sad) 10%, white); }
+  }
+  
+  .animate-pulse {
+    animation: var(--animation-pulse);
+  }
+}
