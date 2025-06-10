@@ -1,11 +1,11 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import { format, subDays, isToday } from 'date-fns';
-import MoodChart from '@/components/MoodChart';
-import MoodCard from '@/components/MoodCard';
-import { fetchMoods } from '@/lib/api';
-import { MoodResponse } from '@/types/mood';
+import MoodChart from '../../components/MoodChart';
+import MoodCard from '../../components/MoodCard';
+import { fetchMoods } from '../../lib/api';
+import { MoodResponse } from '../../types/mood';
+import React from 'react';
 
 export default function CoachView() {
   const [date, setDate] = useState<Date>(new Date());

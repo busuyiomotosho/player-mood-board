@@ -1,8 +1,8 @@
 'use client';
-
 import { useState } from 'react';
-import EmojiButton from '@/components/EmojiButton';
-import { submitMood } from '@/lib/api';
+import EmojiButton from '../../components/EmojiButton';
+import { submitMood } from '../../lib/api';
+import React from 'react';
 
 export default function PlayerView() {
   const [submitted, setSubmitted] = useState(false);
@@ -32,10 +32,10 @@ export default function PlayerView() {
       ) : (
         <>
           <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
-            How was today's training?
+            How was today&apos;s training?
           </h1>
           <p className="text-gray-600 text-center mb-8">
-            Select your mood to help your coach understand the team's feelings
+            Select your mood to help your coach understand the team&apos;s feelings
           </p>
           
           <div className="flex justify-around my-8">
